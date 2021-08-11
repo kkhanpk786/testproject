@@ -1,0 +1,26 @@
+ mongoose1.connection.on("error", (e) => {
+                console.log("mongo connect error!");
+              });
+              mongoose1.connection.on("connected", () => {
+                console.log("connected to mongo");
+              });
+              
+mongoose1.connect(
+    'mongodb://localhost:27017/test', { useNewUrlParser: true,useUnifiedTopology: true }
+  ).catch((e) => {
+    console.log("error connecting to mongoose!");
+  });
+  
+        // var   KAPDEC_DB= (process.env.KAPDEC_DB_USER && process.env.KAPDEC_DB_PASSWORD) ? 'mongodb://' + process.env.KAPDEC_DB_USER + ':' + process.env.KAPDEC_DB_PASSWORD + '@' + process.env.KAPDEC_DB_HOST + '/' + process.env.KAPDEC_DB_NAME : 'mongodb://' + process.env.KAPDEC_DB_HOST + '/rudresh';
+         
+       //  mongoose1.connect(KAPDEC_DB, config.mongo.options);
+        // console.log(config.mongo.options)
+     // var   KAPDEC_FILE_STORAGE_DB= (process.env.KAPDEC_FILE_STORAGE_USERNAME && process.env.KAPDEC_FILE_STORAGE_PASSWORD) ? 'mongodb://' + process.env.KAPDEC_FILE_STORAGE_USERNAME + ':' + process.env.KAPDEC_FILE_STORAGE_PASSWORD + '@' + process.env.KAPDEC_FILE_STORAGE_HOST + '/' + process.env.KAPDEC_FILE_STORAGE_DB_NAME : 'mongodb://' + process.env.KAPDEC_FILE_STORAGE_HOST + '/rudresh';
+   // mongoose.createConnection(KAPDEC_FILE_STORAGE_DB, config.mongo.options);
+
+   
+
+  //  mongoose.connection.on('error', function(err) {
+        //console.error('MongoDB connection error: ' + err);
+   //     process.exit(-1);
+  //  });
